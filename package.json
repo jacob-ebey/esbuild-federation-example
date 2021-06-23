@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "workspaces": [
+    "esbuild-host",
+    "webpack-remote"
+  ],
+  "scripts": {
+    "build": "run-p build:*",
+    "build:esbuild-host": "yarn workspace esbuild-host build",
+    "build:webpack-remote": "yarn workspace webpack-remote build",
+    "start": "run-p start:*",
+    "start:esbuild-host": "yarn workspace esbuild-host start",
+    "start:webpack-remote": "yarn workspace webpack-remote start"
+  },
+  "devDependencies": {
+    "npm-run-all": "4.1.5",
+    "prettier": "2.3.1"
+  }
+}
