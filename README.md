@@ -14,9 +14,7 @@ From the root of the project:
 
 ```bash
 yarn
-
 yarn build
-
 yarn start
 ```
 
