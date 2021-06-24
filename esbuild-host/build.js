@@ -21,7 +21,6 @@ esbuild
     format: "esm",
     bundle: true,
     write: true,
-    splitting: true,
   })
   .then((build) => {
     if (build.errors && build.errors.length) {
