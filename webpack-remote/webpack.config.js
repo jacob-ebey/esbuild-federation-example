@@ -38,6 +38,7 @@ const config = {
       exposes: {
         "./header": "./src/components/header.jsx",
       },
+      shared: ["react"],
     }),
   ],
   optimization: {

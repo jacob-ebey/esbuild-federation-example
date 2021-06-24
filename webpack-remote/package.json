@@ -7,6 +7,10 @@
     "build": "webpack --mode production",
     "start": "serve ./public -p 3001"
   },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
   "devDependencies": {
     "css-loader": "5.2.6",
     "esbuild": "0.12.9",
