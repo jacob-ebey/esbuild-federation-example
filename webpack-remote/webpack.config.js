@@ -7,7 +7,7 @@ const webpack = require("webpack");
  * @type {webpack.Configuration}
  */
 const config = {
-  entry: { app: "./src/index.jsx" },
+  entry: { app: "./src/index.js" },
   output: {
     path: path.resolve("./public/build"),
   },
