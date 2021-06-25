@@ -1,6 +1,8 @@
 import React from "react";
-import { render } from "react-dom";
+import { createRoot } from "react-dom";
 
 import App from "./components/app";
 
-render(<App />, document.getElementById("app"));
+const root = createRoot(document, { hydrate: true });
+
+root.render(<App chunks={window.__CHUNKS__} />);
