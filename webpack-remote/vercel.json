@@ -6,6 +6,10 @@
       "use": "@vercel/static"
     },
     {
+      "src": "public/build/**/*",
+      "use": "@vercel/static"
+    },
+    {
       "src": "vercel-prerender.js",
       "use": "@vercel/node"
     },
@@ -22,6 +26,10 @@
     {
       "src": "/",
       "dest": "/vercel.js"
+    },
+    {
+      "src": "/build/(.*)",
+      "dest": "/public/build/$1"
     },
     {
       "src": "/(.*)",
