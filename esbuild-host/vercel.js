@@ -6,6 +6,12 @@ const { pipeToNodeWritable } = require("react-dom/server");
 const App = require("./dist/app");
 
 export default function handler(req, res) {
+  if (req.url !== "/") {
+    res.status(404);
+    res.send();
+    return;
+  }
+
   const writable = new PassThrough();
   let html = "";
   writable.on("data", (d) => {

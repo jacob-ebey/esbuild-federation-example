@@ -21,7 +21,7 @@
     },
     {
       "source": "/prerender",
-      "destination": "/vercel-prerender.js"
+      "destination": "/vercel-prerender"
     },
     {
       "source": "/(.*)",

@@ -7,6 +7,12 @@ const App = require("./dist/app").default;
 const stats = require("./public/build/stats.json");
 
 export default function handler(req, res) {
+  if (req.url !== "/") {
+    res.status(404);
+    res.send();
+    return;
+  }
+
   const chunks = stats.assetsByChunkName.app.concat(
     stats.assetsByChunkName.bootstrap,
     stats.chunks.reduce((r, chunk) => {
