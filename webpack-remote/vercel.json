@@ -14,18 +14,18 @@
       "use": "@vercel/node"
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "prerender",
-      "destination": "/vercel-prerender.js"
+      "src": "/prerender",
+      "dest": "/vercel-prerender.js"
     },
     {
-      "source": "/",
-      "destination": "/vercel.js"
+      "src": "/",
+      "dest": "/vercel.js"
     },
     {
-      "source": "/(.*)",
-      "destination": "/public/$1"
+      "src": "/(.*)",
+      "dest": "/public/$1"
     }
   ]
 }

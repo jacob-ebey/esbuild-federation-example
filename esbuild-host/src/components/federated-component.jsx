@@ -51,12 +51,11 @@ export default function federatedComponent(
           })
             .then((res) => res.json())
             .then(({ chunks, html }) => {
-              // TODO: preload chunks
               html = html.replace(
                 `\u200Cchildren\u200C`,
                 renderToStaticMarkup(children)
               );
-              console.log(html);
+
               const parser = new Parser();
               const reactElement = parser.parse(html);
 
