@@ -6,10 +6,6 @@
       "use": "@vercel/static"
     },
     {
-      "src": "public/build/**/*",
-      "use": "@vercel/static"
-    },
-    {
       "src": "vercel-prerender.js",
       "use": "@vercel/node"
     },
@@ -18,22 +14,18 @@
       "use": "@vercel/node"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/prerender",
-      "dest": "/vercel-prerender.js"
+      "source": "prerender",
+      "destination": "/vercel-prerender.js"
     },
     {
-      "src": "/",
-      "dest": "/vercel.js"
+      "source": "/",
+      "destination": "/vercel.js"
     },
     {
-      "src": "/build/(.*)",
-      "dest": "/public/build/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/public/$1"
+      "source": "/(.*)",
+      "destination": "/public/$1"
     }
   ]
 }
