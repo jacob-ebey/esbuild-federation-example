@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "public/build/**",
-      "use": "@vercel/static"
+      "use": "@now/static"
     },
     {
       "src": "vercel-prerender.js",
@@ -14,18 +14,18 @@
       "use": "@vercel/node"
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/prerender",
-      "destination": "/vercel-prerender.js"
+      "src": "/prerender",
+      "dest": "/vercel-prerender.js"
     },
     {
-      "source": "/",
-      "destination": "/vercel.js"
+      "src": "/",
+      "dest": "/vercel.js"
     },
     {
-      "source": "/build/(.*)",
-      "destination": "/public/build/$1"
+      "src": "/build/(.*)",
+      "dest": "/public/build/$1"
     }
   ]
 }
