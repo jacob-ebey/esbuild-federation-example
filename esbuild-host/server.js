@@ -1,6 +1,5 @@
 const React = require("react");
 const { pipeToNodeWritable } = require("react-dom/server");
-const fetch = require("node-fetch");
 
 const express = require("express");
 
@@ -18,7 +17,7 @@ app.use("/", (req, res) => {
   }
 
   let didError = false;
-  const ctx = { __chunks__: [] };
+  const ctx = {};
   const { startWriting, abort } = pipeToNodeWritable(
     React.createElement(
       App.context.Provider,
