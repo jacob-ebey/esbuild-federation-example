@@ -12,12 +12,12 @@
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/public/$1"
+      "source": "/",
+      "destination": "/vercel.js"
     },
     {
       "source": "/(.*)",
-      "destination": "/vercel.js"
+      "destination": "/public/$1"
     }
   ]
 }

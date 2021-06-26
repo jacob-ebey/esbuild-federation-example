@@ -16,16 +16,16 @@
   ],
   "rewrites": [
     {
+      "source": "prerender",
+      "destination": "/vercel-prerender.js"
+    },
+    {
+      "source": "/",
+      "destination": "/vercel.js"
+    },
+    {
       "source": "/(.*)",
       "destination": "/public/$1"
-    },
-    {
-      "source": "/prerender",
-      "destination": "/vercel-prerender"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/vercel.js"
     }
   ]
 }
