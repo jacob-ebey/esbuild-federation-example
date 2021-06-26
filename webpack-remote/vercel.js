@@ -19,7 +19,7 @@ export default function handler(req, res) {
   );
 
   const writable = new PassThrough();
-  let html = "<!DOCTYPE html>";
+  let html = "";
   writable.on("data", (d) => {
     html += String(d);
   });

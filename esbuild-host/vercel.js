@@ -1,3 +1,5 @@
+const { PassThrough } = require("stream");
+
 const React = require("react");
 const { pipeToNodeWritable } = require("react-dom/server");
 
@@ -5,7 +7,7 @@ const App = require("./dist/app");
 
 export default function handler(req, res) {
   const writable = new PassThrough();
-  let html = "<!DOCTYPE html>";
+  let html = "";
   writable.on("data", (d) => {
     html += String(d);
   });
@@ -28,10 +30,6 @@ export default function handler(req, res) {
     writable,
     {
       onCompleteAll() {
-        // If something errored before we started streaming, we set the error code appropriately.
-        res.statusCode = didError ? 500 : 200;
-        res.contentType("html");
-        res.write("<!DOCTYPE html>");
         startWriting();
       },
       onError(x) {
