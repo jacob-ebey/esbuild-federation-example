@@ -16,6 +16,7 @@ const federationStats = require("./public/build/federation-stats.json");
 const exposes = federationStats.federatedModules.find(
   (m) => m.remote === "webpackRemote"
 ).exposes;
+
 function getChunksForExposed(exposed) {
   return exposes[exposed].reduce((p, c) => {
     p.push(...c.chunks);

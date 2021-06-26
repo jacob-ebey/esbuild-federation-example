@@ -1,4 +1,4 @@
-import React, { Suspense, useContext } from "react";
+import React from "react";
 
 import federatedComponent from "./federated-component";
 
@@ -9,8 +9,6 @@ export { context };
 const Header = federatedComponent("webpackRemote", "./header");
 
 export default function App() {
-  const ctx = useContext(context);
-
   return (
     <html>
       <head>

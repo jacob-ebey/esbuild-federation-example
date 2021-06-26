@@ -10,5 +10,4 @@ for (let link of links) {
 
 const root = createRoot(document, { hydrate: true });
 
-
 root.render(<App />);
