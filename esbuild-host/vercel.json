@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "public/build/**",
+      "src": "public/**/*",
       "use": "@vercel/static"
     },
     {
@@ -16,8 +16,8 @@
       "destination": "/vercel.js"
     },
     {
-      "source": "/build/(.*)",
-      "destination": "/public/build/$1"
+      "source": "/(.*)",
+      "destination": "/public/$1"
     }
   ]
 }
