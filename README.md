@@ -1,6 +1,6 @@
 # esbuild federation example
 
-Demonstrates consuming modules from a webpack bundle and sharing modules from an esbuild bundle using [esbuild-federation-share-scope](https://github.com/jacob-ebey/esbuild-federation-share-scope).
+Demonstrates consuming modules from a webpack bundle from an esbuild bundle using [esbuild-federation-share-scope](https://github.com/jacob-ebey/esbuild-federation-share-scope).
 
 ## See it live
 
