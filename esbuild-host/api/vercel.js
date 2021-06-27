@@ -3,7 +3,7 @@ const { PassThrough } = require("stream");
 const React = require("react");
 const { pipeToNodeWritable } = require("react-dom/server");
 
-const App = require("./dist/app");
+const App = require("../dist/app");
 
 export default function handler(req, res) {
   if (req.url !== "/") {

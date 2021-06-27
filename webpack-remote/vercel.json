@@ -1,27 +1,21 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "public/**/*",
-      "use": "@vercel/static"
+  "functions": {
+    "api/vercel.js": {
+      "maxDuration": 10
     },
-    {
-      "src": "vercel-prerender.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "vercel.js",
-      "use": "@vercel/node"
+    "api/vercel-prerender.js": {
+      "maxDuration": 10
     }
-  ],
+  },
   "rewrites": [
     {
       "source": "/prerender",
-      "destination": "/vercel-prerender.js"
+      "destination": "/api/vercel-prerender.js"
     },
     {
       "source": "/",
-      "destination": "/vercel.js"
+      "destination": "/api/vercel.js"
     },
     {
       "source": "/(.*)",

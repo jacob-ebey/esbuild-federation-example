@@ -1,15 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "public/**/*",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "vercel.js",
-      "use": "@vercel/node"
+  "functions": {
+    "api/vercel.js": {
+      "maxDuration": 10
     }
-  ],
+  },
   "rewrites": [
     {
       "source": "/",

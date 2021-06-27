@@ -1,8 +1,8 @@
 const React = require("react");
 const { renderToStaticMarkup } = require("react-dom/server");
 
-const remoteEntry = require("./dist/remote-entry");
-const federationStats = require("./public/build/federation-stats.json");
+const remoteEntry = require("../dist/remote-entry");
+const federationStats = require("../public/build/federation-stats.json");
 
 const exposes = federationStats.federatedModules.find(
   (m) => m.remote === "webpackRemote"
