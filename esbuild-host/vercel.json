@@ -8,7 +8,7 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/vercel.js"
+      "destination": "/api/vercel.js"
     },
     {
       "source": "/(.*)",
