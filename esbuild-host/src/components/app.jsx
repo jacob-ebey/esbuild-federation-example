@@ -1,8 +1,6 @@
 import React from "react";
 
-import federatedComponent from "./federated-component";
-
-import context from "./federated-components-ssr-provider";
+import federatedComponent, { context } from "./federated-component";
 
 export { context };
 
@@ -21,6 +19,11 @@ export default function App() {
           <Header>
             <h1>Header</h1>
             <p>Federated from a webpack build</p>
+
+            <Header>
+              <h1>Nested</h1>
+              <p>Nested component</p>
+            </Header>
           </Header>
 
           {Object.entries(process.env.REMOTE_HOSTS).map(([name, entry]) => (
